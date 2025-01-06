@@ -8,7 +8,10 @@
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/main.css'); ?>" />
         <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Atom feed">
         <link rel="shortcut icon" href="https://www.yinwang.org/images/Yc.jpg">
-
+        <!-- 引入 highlight.js 的样式文件 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css">
+        <!-- 引入 highlight.js 的脚本文件 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
         <title><?php $this->title() ?></title>
     </head>
 
@@ -18,6 +21,8 @@
             {
                document.body.classList.add('mobile');
             }
+            // 初始化代码高亮
+            hljs.highlightAll();
         </script>
 
         <div class="inner">
